@@ -1,0 +1,13 @@
+name: 'Code Analysis'
+description: 'Tencent Cloud Code Analysis'
+inputs:
+  label:
+    description: '规则标签'
+    required: false
+    default: 'open_source_check'
+outputs:
+  report:
+    description: 'The scan result'
+runs:
+  using: 'node16'
+  main: 'src/index.js'

@@ -1,0 +1,15 @@
+name: 'TCA'
+on: [push]
+
+jobs:
+  CodeAnalysis:
+    runs-on: ubuntu-latest
+    name: Tencent Cloud Code Analysis
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: TCA
+        uses: ./
+        with:
+          label: 'open_source_check'
