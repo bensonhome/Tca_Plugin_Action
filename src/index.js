@@ -1,11 +1,13 @@
 const core = require('@actions/core')
 const child_process = require('child_process')
-const label = core.getInput('label')
-const client_path = __dirname + '/../lib/tca-client-linux'
+const cwd = __dirname + '/../lib/tca-client-linux'
+// const core = require('@actions/core')
+// const label = core.getInput('label')
+// const client_path = __dirname + '/../lib/tca-client-linux'
 
 try{
     const cmd_init = './codepuppy quickinit --label ' + label
-    child_process.execSync(cmd_init, { client_path }, function(error, stdout, stderr){
+    child_process.execSync(cmd_init, { cwd }, function(error, stdout, stderr){
         if (error){
             core.error(stderr)
             return
