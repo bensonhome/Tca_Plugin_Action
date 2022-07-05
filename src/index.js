@@ -33,6 +33,6 @@ fs.readFile(jsonFile, 'utf8', function(error, data){
     if(error){
         console.log(error)
     }
+    var str = JSON.parse(data)
 })
-var str = JSON.parse(data)
 console.log(str)
