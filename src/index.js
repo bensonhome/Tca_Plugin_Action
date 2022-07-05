@@ -26,7 +26,13 @@ try {
 } catch (error) {
     core.error(error.message)
 }
-
-const data = cwd + 'tca_quick_scan_report.json'
-let str = JSON.stringify(data, null, '\t')
-console.log(str)
+console.log('开始打印分析报告。。。。。。。')
+const jsonFile = cwd + 'tca_quick_scan_report.json'
+var fs = require('fs')
+fs.readFile(jsonFile, 'utf8', function(error, data){
+    if(error){
+        console.log(error)
+    }
+    var str = JSON.parse(data)
+    console.log(str)
+})
