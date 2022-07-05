@@ -27,7 +27,7 @@ try {
     core.error(error.message)
 }
 console.log('开始打印分析报告。。。。。。。')
-const jsonFile = cwd + 'tca_quick_scan_report.json'
+const jsonFile = cwd + '/tca_quick_scan_report.json'
 var fs = require('fs')
 fs.readFile(jsonFile, 'utf8', function(error, data){
     if(error){
