@@ -10,7 +10,6 @@ try{
             core.error(stderr)
             return
         }
-        // core.info(stderr)
     })
 } catch (error){
     core.error(error.message);
@@ -23,8 +22,11 @@ try {
             core.error(stderr)
             return
         }
-        // core.info(stderr)
     })
 } catch (error) {
     core.error(error.message)
 }
+
+const data = cwd + 'tca_quick_scan_report.json'
+let str = JSON.stringify(data, null, '\t')
+core.info(str)
