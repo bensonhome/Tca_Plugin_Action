@@ -18,7 +18,7 @@ try{
 
 try {
     const cmd_scan = './codepuppy quickscan --label ' + label + ' -s ' + process.cwd()
-    child_process.execSync(cmd_scan, { client_path }, function(error, stdout, stderr){
+    child_process.execSync(cmd_scan, { cwd }, function(error, stdout, stderr){
         if (error){
             core.error(stderr)
             return
