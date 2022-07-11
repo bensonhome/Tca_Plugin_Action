@@ -2,6 +2,7 @@ const core = require('@actions/core')
 const child_process = require('child_process')
 const label = core.getInput('label')
 const cwd = __dirname + '/../lib/tca-client-linux'
+const fs = require('fs')
 
 try{
     const cmd_init = './codepuppy quickinit --label ' + label
@@ -26,13 +27,11 @@ try {
 } catch (error) {
     core.error(error.message)
 }
-console.log('开始打印分析报告。。。。。。。')
-const jsonFile = cwd + '/tca_quick_scan_report.json'
-var fs = require('fs')
-fs.readFile(jsonFile, 'utf8', function(error, data){
-    if(error){
-        console.log(error)
-    }
-    var str = JSON.parse(data)
-})
-console.log(str)
+
+try{
+    const jsonFile = cwd + '/tca_quick_scan_report.json'
+    console.log('开始打印分析报告。。。。。。。' + jsonFile)
+    fs.writeFileSync(jsonFile, JSON.stringify(packageJson, null, '\t'))
+} catch (error) {
+    core.error(error.message)
+}
