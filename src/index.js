@@ -30,8 +30,8 @@ try {
 
 try{
     const jsonFile = cwd + '/tca_quick_scan_report.json'
-    console.log('开始打印分析报告。。。。。。。' + jsonFile)
-    core.info(fs.writeFileSync(jsonFile, JSON.stringify(jsonFile, null, '\t')))
+    core.info('开始打印分析报告。。。。。。。' + jsonFile)
+    core.info(JSON.stringify(jsonFile, null, '\t'))
 } catch (error) {
     core.error(error.message)
 }
