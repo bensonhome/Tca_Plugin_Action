@@ -29,8 +29,7 @@ try {
 }
 
 try{
-   const path = require('path')
-   fs.readFile(cwd + '/tca_quick_scan_report.json', (err, buffer) => {
+   fs.createReadStream(cwd + '/tca_quick_scan_report.json', (err, buffer) => {
     if(err) console.error(err)
     let d = buffer.toString()
     core.info(d)
