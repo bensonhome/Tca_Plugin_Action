@@ -3,13 +3,12 @@ const child_process = require('child_process')
 const label = core.getInput('label')
 const cwd = __dirname + '/../lib/tca-client-linux'
 
-try {
-    const os = process.platform
-    core.info(os)
-} catch (error) {
-    core.error(error.message)
-}
 
+const os = process.platform
+core.info(os)
+if(os=='linux'){
+    core.info(os)
+}
 
 try{
     const cmd_init = './codepuppy quickinit --label ' + label
