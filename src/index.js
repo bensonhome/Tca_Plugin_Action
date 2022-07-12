@@ -13,6 +13,10 @@ if(os=='linux'){
     var cmd_init = 'codepuppy.exe quickinit --label ' + label
     var cmd_scan = 'codepuppy.exe quickscan --label ' + label + ' -s ' + process.cwd()
     var cwd = __dirname + '/../lib/tca-client-windows'
+}else if(os=='mac'){
+    var cmd_init = './codepuppy quickinit --label ' + label
+    var cmd_scan = './codepuppy quickscan --label ' + label + ' -s ' + process.cwd()
+    var cwd = __dirname + '/../lib/tca-client-mac'
 }
 
 try{
