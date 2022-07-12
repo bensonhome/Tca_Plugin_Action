@@ -30,7 +30,8 @@ try {
 
 try{
    const path = require('path')
-   const readJsonFile = path.relative(__dirname, '/lib/tca-client-linux/tca_quick_scan_report.json')
+   const readJsonFile = path.relative(cwd, './tca_quick_scan_report.json')
+   core.info(readJsonFile)
    fs.readFile(readJsonFile, (err, buffer) => {
     if(err) console.error(err)
     let d = buffer.toString()
