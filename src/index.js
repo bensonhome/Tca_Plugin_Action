@@ -10,8 +10,8 @@ if(os=='linux'){
     var cmd_init = './codepuppy quickinit --label ' + label
     var cmd_scan = './codepuppy quickscan --label ' + label + ' -s ' + process.cwd()
 }else if(os.substring(0, 3)=='win'){
-    core.info(os)
-}
+    var cmd_init = './codepuppy.exe quickinit --label ' + label
+    var cmd_scan = './codepuppy.exe quickscan --label ' + label + ' -s ' + process.cwd()
 
 try{
     child_process.execSync(cmd_init, { cwd }, function(error, stdout, stderr){
