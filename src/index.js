@@ -6,7 +6,9 @@ const cwd = __dirname + '/../lib/tca-client-linux'
 
 const os = process.platform
 core.info(os)
-if(os=='linux'){
+if(os=='linux' | os=='mac'){
+    core.info(os)
+}else if(os=='window'){
     core.info(os)
 }
 
