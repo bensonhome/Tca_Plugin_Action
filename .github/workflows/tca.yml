@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   CodeAnalysis:
-    runs-on: mac-latest
+    runs-on: macOS
     name: Tencent Cloud Code Analysis
     steps:
       - name: Checkout
