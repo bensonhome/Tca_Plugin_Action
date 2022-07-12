@@ -10,8 +10,8 @@ if(os=='linux'){
     var cmd_scan = './codepuppy quickscan --label ' + label + ' -s ' + process.cwd()
     var cwd = __dirname + '/../lib/tca-client-linux'
 }else if(os.substring(0, 3)=='win'){
-    var cmd_init = './codepuppy.exe quickinit --label ' + label
-    var cmd_scan = './codepuppy.exe quickscan --label ' + label + ' -s ' + process.cwd()
+    var cmd_init = 'codepuppy.exe quickinit --label ' + label
+    var cmd_scan = 'codepuppy.exe quickscan --label ' + label + ' -s ' + process.cwd()
     var cwd = __dirname + '/../lib/tca-client-windows'
 }
 
