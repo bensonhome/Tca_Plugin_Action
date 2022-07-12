@@ -30,9 +30,7 @@ try {
 
 try{
    const path = require('path')
-   const readJsonFile = path.relative(cwd, './tca_quick_scan_report.json')
-   core.info(readJsonFile)
-   fs.readFile(readJsonFile, (err, buffer) => {
+   fs.readFile(cwd + '/tca_quick_scan_report.json', (err, buffer) => {
     if(err) console.error(err)
     let d = buffer.toString()
     core.info(d)
