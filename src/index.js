@@ -29,9 +29,13 @@ try {
 }
 
 try{
-    const jsonFile = cwd + '/tca_quick_scan_report.json'
-    core.info('开始打印分析报告。。。。。。。' + jsonFile)
-    core.info(JSON.stringify(jsonFile, null, '\t'))
+   const path = require('path')
+   const readJsonFile = path.relative(__dirname, '../lib/tca-client-linux/tca_quick_scan_report.json')
+   fs.readFile(readJsonFile, (err, buffer) => {
+    if(err) console.error(err)
+    let d = buffer.toString()
+    core.info(d)
+   })
 } catch (error) {
     core.error(error.message)
 }
