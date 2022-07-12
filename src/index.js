@@ -6,14 +6,14 @@ const cwd = __dirname + '/../lib/tca-client-linux'
 
 const os = process.platform
 core.info(os)
-if(os=='linux' | os=='mac'){
-    core.info(os)
-}else if(os=='window'){
+if(os=='linux'){
+    const cmd_init = './codepuppy quickinit --label ' + label
+    const cmd_scan = './codepuppy quickscan --label ' + label + ' -s ' + process.cwd()
+}else if(os.substring(0, 3)=='win'){
     core.info(os)
 }
 
 try{
-    const cmd_init = './codepuppy quickinit --label ' + label
     child_process.execSync(cmd_init, { cwd }, function(error, stdout, stderr){
         if (error){
             core.error(stderr)
@@ -25,7 +25,6 @@ try{
 }
 
 try {
-    const cmd_scan = './codepuppy quickscan --label ' + label + ' -s ' + process.cwd()
     child_process.execSync(cmd_scan, { cwd }, function(error, stdout, stderr){
         if (error){
             core.error(stderr)
