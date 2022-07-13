@@ -1,4 +1,4 @@
-const { core } = require('.')
+const core = require('./index')
 exports.compressFile = compressFile
 
 function compressFile(filepath, filedir){
@@ -9,5 +9,6 @@ function compressFile(filepath, filedir){
             core.info('解压成功')
         })
     } catch (error) {
+        core.info(error)
     }
 }

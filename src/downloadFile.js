@@ -1,3 +1,5 @@
+exports.downloadFile = downloadFile
+
 function downloadFile(url, fileName, dir){
     const core = require('@actions/core')
     const fs = require('fs')
@@ -9,5 +11,3 @@ function downloadFile(url, fileName, dir){
         core.info('文件【' + fileName + '】下载完毕')
     })
 }
-
-exports.downloadFile = downloadFile
