@@ -2,7 +2,6 @@ const settings = require('./settings')
 const downloadFile = require('./downloadFile')
 const compressFile = require('./compressFile')
 const core = require('@actions/core')
-exports.core = core
 const label = core.getInput('label')
 const os = process.platform
 if(os=='linux'){

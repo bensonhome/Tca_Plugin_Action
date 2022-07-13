@@ -1,7 +1,7 @@
-const core = require('./index')
 exports.compressFile = compressFile
 
 function compressFile(filepath, filedir){
+    const core = require('@actions/core')
     const compressing = require('compressing')
 
     try {
