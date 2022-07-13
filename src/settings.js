@@ -4,8 +4,10 @@ var linuxURL = 'https://github.com/Tencent/CodeAnalysis/releases/download/202206
 exports.linuxURL = linuxURL
 exports.linuxName = linuxURL.split('/')[linuxURL.split('/').length - 1]
 
-exports.darwinURL = 'https://github.com/Tencent/CodeAnalysis/releases/download/20220629.1/tca-client-v20220629.1-x86_64-apple-darwin.zip'
+var darwinURL = 'https://github.com/Tencent/CodeAnalysis/releases/download/20220629.1/tca-client-v20220629.1-x86_64-apple-darwin.zip'
+exports.darwinURL = darwinURL
 exports.darwinName = darwinURL.split('/')[darwinURL.split('/').length - 1]
 
-exports.windowsURL = 'https://github.com/Tencent/CodeAnalysis/releases/download/20220629.1/tca-client-v20220629.1-x86_64-windows.zip'
+var windowsURL = 'https://github.com/Tencent/CodeAnalysis/releases/download/20220629.1/tca-client-v20220629.1-x86_64-windows.zip'
+exports.windowsURL = windowsURL
 exports.windowsName = windowsURL.split('/')[windowsURL.split('/').length - 1]
