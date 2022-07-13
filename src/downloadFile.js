@@ -1,9 +1,4 @@
 function downloadFile(url, fileName, dir){
-    const core = require('./index')
-    core.core.info(url)
-    core.core.info(fileName)
-    core.core.info(dir)
-
     const core = require('@actions/core')
     const fs = require('fs')
     const path = require('path')
