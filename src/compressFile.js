@@ -9,6 +9,5 @@ function compressFile(filepath, filedir){
             core.info('解压成功')
         })
     } catch (error) {
-        console.log(error)
     }
 }
