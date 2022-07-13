@@ -6,7 +6,7 @@ const label = core.getInput('label')
 const os = process.platform
 if(os=='linux'){
     var cmd_init = './codepuppy quickinit --label ' + label
-    var cmd_scan = './codepuppy quickscan --label ' + label + ' -s ' + process.cwd()
+    var cmd_scan = './codepuppy quickscan --label ' + label + ' -s ' + process.cwd() + '/src'
     var cwd = __dirname + '/../lib/tca-client-linux'
     downloadFile.downloadFile(settings.linuxURL, settings.darwinName, settings.dir)
 }else if(os=='win32'){
