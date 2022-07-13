@@ -1,5 +1,6 @@
 const settings = require('./settings')
 const downloadFile = require('./downloadFile')
+const core = require('@actions/core')
 const label = core.getInput('label')
 const os = process.platform
 if(os=='linux'){
@@ -19,7 +20,6 @@ if(os=='linux'){
     downloadFile.downloadFile(settings.darwinURL, settings.darwinName, settings.dir)
 }
 
-const core = require('@actions/core')
 const child_process = require('child_process')
 
 try{  // client 初始化
