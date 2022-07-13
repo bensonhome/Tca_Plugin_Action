@@ -1,5 +1,5 @@
-const core = require('@actions/core')
 function downloadFile(url, fileName, dir){
+    const core = require('@actions/core')
     core.info(url)
     core.info(fileName)
     core.info(dir)
