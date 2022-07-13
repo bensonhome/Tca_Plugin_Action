@@ -1,3 +1,4 @@
+const core = require('@actions/core')
 function downloadFile(url, fileName, dir){
     core.info(url)
     core.info(fileName)
