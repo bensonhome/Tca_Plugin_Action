@@ -1,5 +1,6 @@
 const settings = require('./settings')
 const downloadFile = require('./downloadFile')
+const compressFile = require('./compressFile')
 const core = require('@actions/core')
 exports.core = core
 const label = core.getInput('label')
@@ -8,7 +9,8 @@ if(os=='linux'){
     var cmd_init = './codepuppy quickinit --label ' + label
     var cmd_scan = './codepuppy quickscan --label ' + label + ' -s ' + process.cwd() + '/src'
     var cwd = __dirname + '/../lib/tca-client-linux'
-    downloadFile.downloadFile(settings.linuxURL, settings.darwinName, settings.dir)
+    downloadFile.downloadFile(settings.linuxURL, settings.linuxName, settings.dir)
+    compressFile.compressFile(settings.dir + '/' + settings.linuxName, settings.dir + '/' + settings.linuxName.split('.')[0])
 }else if(os=='win32'){
     var cmd_init = 'codepuppy.exe quickinit --label ' + label
     var cmd_scan = 'codepuppy.exe quickscan --label ' + label + ' -s ' + process.cwd()
