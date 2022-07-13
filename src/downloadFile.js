@@ -13,3 +13,5 @@ function downloadFile(url, fileName, dir){
         core.info('文件【' + fileName + '】下载完毕')
     })
 }
+
+exports.downloadFile = downloadFile
