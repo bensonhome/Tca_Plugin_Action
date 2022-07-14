@@ -4,7 +4,7 @@ function downloadFile(url, fileName, dir){
     const core = require('@actions/core')
     const fs = require('fs')
     const path = require('path')
-    const request = require('request')
+    const request = require('sync-request')
 
     var stream = fs.createWriteStream(path.join(dir, fileName))
     request(url).pipe(stream).on('close', function(err){
