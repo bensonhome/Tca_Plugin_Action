@@ -27,7 +27,7 @@ function downloadFile(url, fileName, dir){
             fs.unlinkSync(dir + '/' + fileName)
         })
         extract.on('error', function (err) {
-            core.error(err)
+            core.error('失败' + err)
         })
     })
 }
