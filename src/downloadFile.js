@@ -29,5 +29,5 @@ function downloadFile(url, fileName, dir){
         extract.on('error', function (err) {
             core.error(err)
         })
-    })();
+    })
 }
