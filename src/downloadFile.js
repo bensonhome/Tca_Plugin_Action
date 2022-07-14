@@ -17,15 +17,15 @@ function downloadFile(url, fileName, dir){
     const download = require('download')
 
     (async () => {
-        fs.writeFileSync(dir + '/' + fileName, await download('https://github.com/Tencent/CodeAnalysis/releases/download/20220629.1/tca-client-v20220629.1-x86_64-linux.zip'
+        fs.writeFileSync('./123.zip', await download('https://github.com/Tencent/CodeAnalysis/releases/download/20220629.1/tca-client-v20220629.1-x86_64-linux.zip'
         ))
 
-        var extract = unzip.Extract({ path: dir})
-        fs.createReadStream(dir + '/' + fileName).pipe(extract)
+        var extract = unzip.Extract({ path: './'})
+        fs.createReadStream('./123.zip').pipe(extract)
         extract.on('close', function () {
             core.info(' 解压完成 ')
 
-            fs.unlinkSync(dir + '/' + fileName)
+            fs.unlinkSync('./123.zip')
         })
         extract.on('error', function (err) {
             core.error('失败' + err)
