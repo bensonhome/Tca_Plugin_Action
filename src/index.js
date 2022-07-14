@@ -6,7 +6,7 @@ const label = core.getInput('label')
 const os = process.platform
 if(os=='linux'){
     downloadFile.downloadFile(settings.linuxURL, settings.linuxName, settings.dir)
-    compressFile.compressFile(settings.dir + '/' + settings.linuxName, settings.dir + '/' + settings.linuxName.split('.')[0])
+    // compressFile.compressFile(settings.dir + '/' + settings.linuxName, settings.dir + '/' + settings.linuxName.split('.')[0])
     var cmd_init = './codepuppy quickinit --label ' + label
     var cmd_scan = './codepuppy quickscan --label ' + label + ' -s ' + process.cwd() + '/src'
     var cwd = __dirname + '/../lib/tca-client-linux'
