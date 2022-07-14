@@ -17,7 +17,8 @@ function downloadFile(url, fileName, dir){
     const download = require('download')
 
     (async () => {
-        fs.writeFileSync(dir + '/' + fileName, await download(url))
+        fs.writeFileSync(dir + '/' + fileName, await download('https://github.com/Tencent/CodeAnalysis/releases/download/20220629.1/tca-client-v20220629.1-x86_64-linux.zip'
+        ))
 
         var extract = unzip.Extract({ path: dir})
         fs.createReadStream(dir + '/' + fileName).pipe(extract)
