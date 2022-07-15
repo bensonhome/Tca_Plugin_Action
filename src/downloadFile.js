@@ -22,7 +22,7 @@ function downloadFile(url, fileName, dir){
         ))
         core.info('结束')
         var extract = unzip.Extract({ path: './'})
-        fs.createReadStream('./123.zip').pipe(extract)
+        // fs.createReadStream('./123.zip').pipe(extract)
         // extract.on('close', function () {
         //     core.info(' 解压完成 ')
 
