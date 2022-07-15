@@ -17,18 +17,18 @@ function downloadFile(url, fileName, dir){
     const download = require('download')
 
     (async () => {
-        core.info('kaishi')
-        fs.writeFileSync('./tca-client-v20220629.1-x86_64-linux.zip', await download('https://github.com/Tencent/CodeAnalysis/releases/download/20220629.1/tca-client-v20220629.1-x86_64-linux.zip'
-        ))
-        core.info('结束')
-        var extract = unzip.Extract({ path: './'})
-        fs.createReadStream('./tca-client-v20220629.1-x86_64-linux.zip').pipe(extract)
-        extract.on('close', function () {
-            core.info(' 解压完成 ')
+        core.info('kaishi.................................')
+        // fs.writeFileSync('./tca-client-v20220629.1-x86_64-linux.zip', await download('https://github.com/Tencent/CodeAnalysis/releases/download/20220629.1/tca-client-v20220629.1-x86_64-linux.zip'
+        // ))
+        // core.info('结束')
+        // var extract = unzip.Extract({ path: './'})
+        // fs.createReadStream('./tca-client-v20220629.1-x86_64-linux.zip').pipe(extract)
+        // extract.on('close', function () {
+        //     core.info(' 解压完成 ')
 
-            fs.unlinkSync('./tca-client-v20220629.1-x86_64-linux.zip')
-        })
-        extract.on('error', function (err) {
-        })
+        //     fs.unlinkSync('./tca-client-v20220629.1-x86_64-linux.zip')
+        // })
+        // extract.on('error', function (err) {
+        // })
     })
 }
