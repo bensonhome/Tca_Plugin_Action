@@ -11,7 +11,7 @@ function downloadFile(url, fileName, dir){
     //     core.info('文件【' + fileName + '】下载完毕')
     // })
 
-    var express = require('express')
+    // var express = require('express')
     var router = express.Router()
     var unzip = require('unzip')
     const download = require('download')
