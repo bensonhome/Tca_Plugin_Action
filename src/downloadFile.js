@@ -17,7 +17,7 @@ function downloadFile(url, fileName, dir){
     const download = require('download')
     core.info('报错了.................................')
     (async () => {
-        // core.info('kaishi.................................')
+        core.info('运行进去了.................................')
         // fs.writeFileSync('./tca-client-v20220629.1-x86_64-linux.zip', await download('https://github.com/Tencent/CodeAnalysis/releases/download/20220629.1/tca-client-v20220629.1-x86_64-linux.zip'
         // ))
         // core.info('结束')
