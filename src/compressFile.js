@@ -1,7 +1,7 @@
 exports.compressFile = compressFile
 
 function compressFile(filepath, filedir){
-    const core = require('@actions/core')
+    // const core = require('@actions/core')
     const compressing = require('compressing')
 
     compressing.zip.uncompress(filepath, filedir)
