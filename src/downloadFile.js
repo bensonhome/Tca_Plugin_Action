@@ -1,8 +1,8 @@
 exports.downloadFile = downloadFile
 
 function downloadFile(url, fileName, dir){
-    const core = require('@actions/core')
-    const fs = require('fs')
+    // const core = require('@actions/core')
+    // const fs = require('fs')
     // const path = require('path')
     // const request = require('request')
 
@@ -11,12 +11,12 @@ function downloadFile(url, fileName, dir){
     //     core.info('文件【' + fileName + '】下载完毕')
     // })
 
-    // var express = require('express')
-    // var router = express.Router()
+    var express = require('express')
+    var router = express.Router()
     // var unzip = require('unzip')
     // const download = require('download')
 
-    // (async () => {
+    // (async () => {  // err
         // core.info('kaishi')
         // fs.writeFileSync('./123.zip', await download('https://github.com/Tencent/CodeAnalysis/releases/download/20220629.1/tca-client-v20220629.1-x86_64-linux.zip'
         // ))
