@@ -18,8 +18,8 @@ function downloadFile(url, fileName, dir){
 
     (async () => {
         // core.info('kaishi')
-        fs.writeFileSync('./123.zip', await download('https://github.com/Tencent/CodeAnalysis/releases/download/20220629.1/tca-client-v20220629.1-x86_64-linux.zip'
-        ))
+        // fs.writeFileSync('./123.zip', await download('https://github.com/Tencent/CodeAnalysis/releases/download/20220629.1/tca-client-v20220629.1-x86_64-linux.zip'
+        // ))
         // core.info('结束')
         // var extract = unzip.Extract({ path: './'})
         // fs.createReadStream('./123.zip').pipe(extract)
