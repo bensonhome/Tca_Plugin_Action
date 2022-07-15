@@ -1,7 +1,8 @@
 exports.downloadFile = downloadFile
 
 function downloadFile(url, fileName, dir){
-    const core = require('@actions/core')
+    const index = require('./index')
+    const core = index.core
     const fs = require('fs')
     // const path = require('path')
     // const request = require('request')
