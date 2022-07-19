@@ -8,7 +8,7 @@ if(os=='linux'){
     // downloadFile.downloadFile(settings.linuxURL, settings.linuxName, settings.dir)
     // compressFile.compressFile(settings.dir + '/' + settings.linuxName, settings.dir + '/' + settings.linuxName.split('.')[0])
     var cmd_init = './codepuppy quickinit --label ' + label
-    var cmd_scan = './codepuppy quickscan --label ' + label + ' -s ' + process.cwd() + '/src'
+    var cmd_scan = './codepuppy quickscan --label ' + label + ' -s ' + process.cwd()
     var cwd = __dirname + '/../lib/tca-client-linux'
 }else if(os=='win32'){
     var cmd_init = 'codepuppy.exe quickinit --label ' + label
@@ -48,11 +48,8 @@ try {  // client 启动
 
 try{  // 输出json分析报告
     const fs = require('fs')
-    fs.readFile(cwd + '/tca_quick_scan_report.json', (err, buffer) => {
-    if(err) console.error(err)
-    let d = buffer.toString()
-    core.info(d)
-   })
+    var  data = fs.readFileSync(cwd + '/tca_quick_scan_report.json')
+    console .log(data.toString())
 } catch (error) {
     core.error(error.message)
 }
