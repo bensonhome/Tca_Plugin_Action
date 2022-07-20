@@ -48,13 +48,13 @@ try {  // client 启动
 
 try{  // 输出json分析报告
     const fs = require('fs')
-    fs.readFile(cwd + '/tca_quick_scan_report.json'), (err, buffer) => {
+    fs.readFile(cwd + '/tca_quick_scan_report.json', (err, buffer) => {
         if(err){
             console.error(err)
         }
         let d = buffer.toString()
         core.info(d)
-    }
+    })
 } catch (error) {
     core.error(error.message)
 }
