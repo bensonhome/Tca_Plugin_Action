@@ -13,4 +13,4 @@ jobs:
         uses: ./
         with:
           label: 'open_source_check'
-          white_paths: 'src/.*'
+          white_paths: '/home/runner/work/Tca_Plugin_Action/Tca_Plugin_Action/src/.*'
