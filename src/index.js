@@ -8,7 +8,7 @@ var ignore_paths = core.getInput('ignore_paths')
 const os = process.platform
 
 if(white_paths.length != 0 || white_paths){
-    white_paths = ' --include ' + white_paths
+    white_paths = ' --include ' + "'" + white_paths + "'"
 }
 if(ignore_paths.length != 0 || ignore_paths){
     ignore_paths = ' --exclude ' + ignore_paths
