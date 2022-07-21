@@ -5,6 +5,12 @@ inputs:
     description: '规则标签'
     required: false
     default: 'open_source_check'
+  white_paths:
+    description: '指定相对工作区的扫描路径正则表达式(白名单)，多个用英文逗号分割。'
+    required: false
+  ignore_paths:
+    description: '指定相对工作区屏蔽路径正则表达式(黑名单)，多个用英文逗号分割。'
+    required: false
 outputs:
   report:
     description: 'The scan result'

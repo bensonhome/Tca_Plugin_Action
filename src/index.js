@@ -3,7 +3,13 @@ const downloadFile = require('./downloadFile')
 const compressFile = require('./compressFile')
 const core = require('@actions/core')
 const label = core.getInput('label')
+const white_paths = core.getInput('white_paths')
+const ignore_paths = core.getInput('ignore_paths')
 const os = process.platform
+
+core.info(white_paths)
+core.info(ignore_paths)
+
 if(os=='linux'){
     // downloadFile.downloadFile(settings.linuxURL, settings.linuxName, settings.dir)
     // compressFile.compressFile(settings.dir + '/' + settings.linuxName, settings.dir + '/' + settings.linuxName.split('.')[0])
