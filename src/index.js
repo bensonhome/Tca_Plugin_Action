@@ -3,8 +3,8 @@ const downloadFile = require('./downloadFile')
 const compressFile = require('./compressFile')
 const core = require('@actions/core')
 const label = core.getInput('label')
-const white_paths = core.getInput('white_paths')
-const ignore_paths = core.getInput('ignore_paths')
+var white_paths = core.getInput('white_paths')
+var ignore_paths = core.getInput('ignore_paths')
 const os = process.platform
 
 if(white_paths.length != 0 || white_paths){
