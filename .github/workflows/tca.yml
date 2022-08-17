@@ -13,4 +13,3 @@ jobs:
         uses: ./
         with:
           label: 'open_source_check'
-          white_paths: '*/src/*'
